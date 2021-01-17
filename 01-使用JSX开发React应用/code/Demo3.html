@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="./react.development.js"></script>
+    <script  src="./react-dom.development.js"></script>
+    <script src="./babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+    </div>
+</body>
+    <script type="text/babel">
+        let root = document.getElementById("root");
+        let isLogin = false;
+        function render() {
+            ReactDOM.render(
+                <div>
+                    <h2>{isLogin ?'欢迎驽马':'请先登录'}</h2>
+                    <button onClick={changeText}>{isLogin ? '退出' : '登录'}</button>
+                </div>,
+                root
+            )
+        }
+        function changeText() {
+            isLogin = !isLogin;
+            render();
+        }
+        render();
+    </script>
+</html>

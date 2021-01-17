@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="./react.development.js"></script>
+    <script  src="./react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2 class='head'></h2>
+        <button class='btn' onClick="changeText()"></button>
+    </div>
+</body>
+<script>
+    let isLogin = false;
+    let root = document.getElementById("root");
+    let h2 = document.getElementsByClassName("head")[0];
+    let button = document.getElementsByClassName("btn")[0];
+    function changeText() {
+        isLogin = !isLogin; 
+        render();   
+    }
+    function render() {
+        h2.innerHTML = isLogin ? '欢迎驽马' : '请先登录';
+        button.innerHTML = isLogin ? '退出' : '登录'; 
+    }
+    render();
+</script>
+</html>

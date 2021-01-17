@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="./react.development.js"></script>
+    <script  src="./react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root">
+    </div>
+</body>
+<script>
+    let isLogin = false;
+    function changeText() {
+        isLogin = !isLogin;
+        render();
+    }
+    function render() {
+        let root = document.getElementById("root");
+        let h2 = React.createElement('h2', null, isLogin ?'欢迎驽马':'请先登录');
+        let button = React.createElement('button',{onClick:changeText}, isLogin ? '退出' : '登录');
+        let e = React.createElement('div',null, h2, button);
+        ReactDOM.render(e, root);
+    }
+    render();
+
+</script>
+</html>
