@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>点击我</button>
+        <button id='remove_lister'>移除监听</button>
+    </div>
+</body>
+<script>
+    const btn = document.querySelector('button');
+    function click_me() {
+        alert('hello javascript');
+    }
+    btn.addEventListener('click', click_me);
+    function click_me2() {
+        alert('hello javascript--2');
+    }
+    btn.addEventListener('click', click_me2);
+
+    const btn2 = document.getElementById('remove_lister')
+    function remove_lister() {
+        btn.removeEventListener('click', click_me);
+    }
+    btn2.addEventListener('click', remove_lister);
+</script>
+</html>

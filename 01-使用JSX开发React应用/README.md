@@ -1,3 +1,5 @@
+本文首发自公众号【乐戈er】原文链接：[使用JSX开发React应用](https://mp.weixin.qq.com/s?__biz=MzU2ODM3ODA4Mw==&mid=2247483950&idx=1&sn=6621664912657ec2b8ae8a87e877b537&chksm=fc8f95a2cbf81cb4ebe5b89d19397511bceb2b342beb64eb6638849cfd61df27c076b8aa79b4&token=1102166470&lang=zh_CN#rd)
+
 ### 问题
 
 - 在我们编写项目的时候React代码转换HTML代码经历了哪些阶段？

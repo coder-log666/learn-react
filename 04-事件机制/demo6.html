@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .grand {
+        width: 300px;
+        height: 300px;
+        font-size: 30px;
+        background-color: blue;
+      }
+      .father {
+        width: 150px;
+        height: 150px;
+        font-size: 30px;
+        background-color: green;
+      }
+
+      .son {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        background-color: pink;
+      }
+
+      .son2 {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        background-color: gray;
+      }
+      .father2 {
+        width: 150px;
+        height: 150px;
+        font-size: 30px;
+        margin-left: 150px;
+        background-color: purple;
+      }
+    </style>
+</head>
+<body>
+    <div class="grand">
+      <p>grand</p>
+      <div class="father">
+        <p>father</p>
+        <div class="son">
+          <p>son</p>
+        </div>
+        <div class="son2">
+          <p>son2</p>
+        </div>
+      </div>
+      <!-- <div class="father2">
+        <p>father2</p>
+      </div> -->
+    </div>
+</body>
+<script>
+  const grand = document.querySelector('.grand')
+  const father = document.querySelector('.father')
+  const father2 = document.querySelector('.father2')
+  const son = document.querySelector('.son')
+  const son2 = document.querySelector('.son2')
+
+  grand.onclick = function() {
+    alert('grand-clicked');
+  }
+
+  son.onclick = function(e) {
+    alert('son-clicked');
+    e.stopPropagation()
+  }
+
+  // function parentClicked() {
+  //   alert('grand-clicked');
+  // }
+  // function childClicked() {
+  //   alert('son-clicked');
+  // }
+
+  // function child2Clicked() {
+  //   alert('son2-clicked');
+  // }
+
+  // function fatherClicked() {
+  //   alert('father-clicked');
+  // }
+
+  // function father2Clicked() {
+  //   alert('father2-clicked');
+  // }
+
+  // grand.addEventListener('click', parentClicked, true)
+  // father.addEventListener('click', fatherClicked, true)
+  // father.addEventListener('click', father2Clicked, true)
+  // son.addEventListener('click', childClicked, true)
+  // son2.addEventListener('click', child2Clicked, true)
+</script>
+</html>
